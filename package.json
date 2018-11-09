@@ -1,0 +1,16 @@
+{
+  "name": "css-grid-framework",
+  "version": "1.0.0",
+  "description": "A minimal 12-column CSS grid framework with utilities and components",
+  "main": "src/grid.css",
+  "style": "src/grid.css",
+  "scripts": {
+    "start": "open index.html",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": ["css", "grid", "framework", "responsive", "flexbox"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

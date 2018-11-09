@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Framework - Demo</title>
+  <link rel="stylesheet" href="src/reset.css">
+  <link rel="stylesheet" href="src/grid.css">
+  <link rel="stylesheet" href="src/utilities.css">
+  <link rel="stylesheet" href="src/typography.css">
+  <link rel="stylesheet" href="src/buttons.css">
+  <link rel="stylesheet" href="src/forms.css">
+  <link rel="stylesheet" href="src/cards.css">
+  <link rel="stylesheet" href="src/navbar.css">
+  <style>
+    .demo-section { padding: 3rem 0; }
+    .demo-section + .demo-section { border-top: 1px solid #e5e7eb; }
+    .demo-col { background-color: #e8f0fe; padding: 0.75rem; text-align: center; border-radius: 4px; margin-bottom: 0.5rem; font-size: 0.9rem; color: #1a56db; }
+    .hero { background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); color: #fff; padding: 4rem 0; }
+    .footer { background-color: #212529; color: #9ca3af; padding: 2rem 0; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark">
+    <a class="navbar-brand" href="#">GridCSS</a>
+    <button class="navbar-toggler" onclick="document.getElementById('nav').classList.toggle('show')">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="navbar-nav" id="nav">
+      <li><a class="nav-link active" href="#">Home</a></li>
+      <li><a class="nav-link" href="#grid">Grid</a></li>
+      <li><a class="nav-link" href="#components">Components</a></li>
+      <li><a class="nav-link" href="#forms">Forms</a></li>
+      <li><a class="nav-link" href="#">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container text-center">
+      <h1 class="mb-3">CSS Grid Framework</h1>
+      <p class="lead mb-4" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+        A minimal, lightweight 12-column grid framework built with Flexbox.
+        No JavaScript dependencies. Just clean, responsive CSS.
+      </p>
+      <a href="#grid" class="btn btn-primary btn-lg mr-2">Get Started</a>
+      <a href="#" class="btn btn-outline-primary btn-lg" style="color:#fff; border-color:#fff;">View on GitHub</a>
+    </div>
+  </section>
+
+  <!-- Grid Demo -->
+  <section class="demo-section" id="grid">
+    <div class="container">
+      <h2 class="mb-2">12-Column Grid</h2>
+      <p class="text-muted mb-4">Responsive flexbox grid with gutters and offsets.</p>
+
+      <div class="row mb-3">
+        <div class="col-12"><div class="demo-col">col-12</div></div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-6"><div class="demo-col">col-6</div></div>
+        <div class="col-6"><div class="demo-col">col-6</div></div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-4"><div class="demo-col">col-4</div></div>
+        <div class="col-4"><div class="demo-col">col-4</div></div>
+        <div class="col-4"><div class="demo-col">col-4</div></div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-3"><div class="demo-col">col-3</div></div>
+        <div class="col-3"><div class="demo-col">col-3</div></div>
+        <div class="col-3"><div class="demo-col">col-3</div></div>
+        <div class="col-3"><div class="demo-col">col-3</div></div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-4 col-offset-4"><div class="demo-col">col-4 offset-4</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Cards -->
+  <section class="demo-section" id="components" style="background-color: #f9fafb;">
+    <div class="container">
+      <h2 class="text-center mb-2">Features</h2>
+      <p class="text-center text-muted mb-4">Everything you need for rapid prototyping.</p>
+
+      <div class="row">
+        <div class="col-12 col-md-4 mb-3">
+          <div class="card card-shadow h-100">
+            <div class="card-body text-center">
+              <h3 class="card-title text-lg">Responsive Grid</h3>
+              <p class="card-text">12-column flexbox grid with sm, md, lg breakpoints and column offsets.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <div class="card card-shadow h-100">
+            <div class="card-body text-center">
+              <h3 class="card-title text-lg">Utility Classes</h3>
+              <p class="card-text">Spacing, display, typography, and layout utilities for quick styling.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <div class="card card-shadow h-100">
+            <div class="card-body text-center">
+              <h3 class="card-title text-lg">Components</h3>
+              <p class="card-text">Cards, buttons, forms, and navbar ready to drop into any project.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Example -->
+  <section class="demo-section" id="forms">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 col-offset-2">
+          <h2 class="mb-2">Contact Form</h2>
+          <p class="text-muted mb-4">Styled form controls with validation states.</p>
+
+          <form onsubmit="event.preventDefault()">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="form-group">
+                  <label class="form-label">First Name</label>
+                  <input type="text" class="form-control" placeholder="John">
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group">
+                  <label class="form-label">Last Name</label>
+                  <input type="text" class="form-control" placeholder="Doe">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="john@example.com">
+              <span class="form-text">We'll never share your email.</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Subject</label>
+              <select class="form-select">
+                <option>Choose a subject...</option>
+                <option>General Inquiry</option>
+                <option>Bug Report</option>
+                <option>Feature Request</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="4" placeholder="Your message..."></textarea>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input type="checkbox" id="terms">
+                <label for="terms">I agree to the terms and conditions</label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Button Showcase -->
+  <section class="demo-section" style="background-color: #f9fafb;">
+    <div class="container">
+      <h2 class="mb-2">Buttons</h2>
+      <p class="text-muted mb-4">Solid, outline, and sized button variants.</p>
+
+      <div class="mb-3">
+        <button class="btn btn-primary mr-1">Primary</button>
+        <button class="btn btn-secondary mr-1">Secondary</button>
+        <button class="btn btn-success mr-1">Success</button>
+        <button class="btn btn-danger mr-1">Danger</button>
+        <button class="btn btn-outline-primary mr-1">Outline</button>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-primary btn-sm mr-1">Small</button>
+        <button class="btn btn-primary mr-1">Default</button>
+        <button class="btn btn-primary btn-lg mr-1">Large</button>
+      </div>
+      <div>
+        <button class="btn btn-primary" disabled>Disabled</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-center">
+        <div class="col-12 col-md-6">
+          <p class="mb-0">CSS Grid Framework &mdash; MIT License</p>
+        </div>
+        <div class="col-12 col-md-6 text-right">
+          <p class="mb-0">Built with pure CSS. No dependencies.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
