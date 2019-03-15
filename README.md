@@ -149,3 +149,28 @@ Flexbox-based layout requires a modern browser. No IE11 support.
 ## License
 
 MIT
+
+---
+
+## 🇫🇷 Documentation en français
+
+### Description
+**CSS Grid Framework** est un framework CSS léger (~8 Ko) basé sur Flexbox avec une grille à 12 colonnes. Il ne nécessite aucun JavaScript, aucun outil de build et aucune dépendance — uniquement du CSS pur pour un prototypage rapide. Il inclut des utilitaires d'espacement, de typographie, des boutons, des formulaires, des cartes et une barre de navigation responsive.
+
+### Installation
+Incluez les fichiers CSS directement dans votre HTML :
+```html
+<link rel="stylesheet" href="src/reset.css">
+<link rel="stylesheet" href="src/grid.css">
+<link rel="stylesheet" href="src/utilities.css">
+```
+
+### Utilisation
+```html
+<div class="container">
+  <div class="row">
+    <div class="col-6">Moitié gauche</div>
+    <div class="col-6">Moitié droite</div>
+  </div>
+</div>
+```
