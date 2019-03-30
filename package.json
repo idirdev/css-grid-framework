@@ -6,11 +6,18 @@
   "style": "src/grid.css",
   "scripts": {
     "start": "open index.html",
-    "test": "echo \"No tests specified\" && exit 0"
+    "test": "vitest run"
   },
-  "keywords": ["css", "grid", "framework", "responsive", "flexbox"],
+  "keywords": [
+    "css",
+    "grid",
+    "framework",
+    "responsive",
+    "flexbox"
+  ],
   "author": "",
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "vitest": "^4.1.0"
+  }
 }
